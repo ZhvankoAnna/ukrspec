@@ -1,0 +1,23 @@
+{
+  "name": "pbobuilding",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.2",
+    "parcel": "^2.9.2",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "@parcel/transformer-css": "^2.9.2",
+    "posthtml-doctype": "^1.1.1",
+    "swiper": "^9.4.1"
+  }
+}
