@@ -1,6 +1,6 @@
-import './js/menu';
-import './js/about';
-import './js/services';
-import './js/gallery';
-import './js/steps';
-import './js/clients';
+import './src/js/menu';
+import './src/js/about';
+import './src/js/services';
+import './src/js/gallery';
+import './src/js/steps';
+import './src/js/clients';

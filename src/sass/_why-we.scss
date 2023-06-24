@@ -28,7 +28,7 @@
     padding: 0 109px;
   }
 }
-.preference-title{ 
+.preference-title{
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
@@ -52,7 +52,7 @@
   line-height: 1.2;
   color:$disable-color;
   width: 358px;
-  
+
   @media screen and (max-width: $desktop) {
     font-size: 20px;
     font-weight: 400;
@@ -60,14 +60,14 @@
 
   }
 }
-.preference__photo {  
+.preference__photo {
   background-size: contain;
   min-width: 358px;
   min-height: 158px;
   display: inline-block;
   border-radius: 20px;
   margin-bottom: 21px;
-  
+
   @media screen and (min-width: $desktop) {
     padding: 0 24 0 0;
     min-width: 628px;
@@ -81,7 +81,7 @@
     min-width: 411px;
   }
 }
- 
+
 details {
   position: relative;
   border-bottom: none;
@@ -90,7 +90,7 @@ details {
     border-bottom: 1px solid #C5C3C6;
     //padding-bottom: 14px;
   }
-} 
+}
 
 details[open] > details {
   border-bottom: 1px solid #C5C3C6;
@@ -102,7 +102,7 @@ details[open] > details {
     margin-bottom: 0px;
     margin-right: 24px;
     padding-bottom: 17px;
-    
+
   }
 }
 summary::-webkit-details-marker {
@@ -137,14 +137,14 @@ summary::after {
     @media screen and (min-width: 768px) {
      // top: 25px;
     }
-  
-  
+
+
 }
 
 details[open] > summary::after {
   transform: rotate(180deg);
   content: " ";
-} 
+}
 
 details summary:after {
   position: absolute;
@@ -155,7 +155,7 @@ details summary:after {
   top: 7px;
     @media screen and (min-width: 768px) {
       top: 27px;
-   
+
   }
 }
 
