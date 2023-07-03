@@ -14,9 +14,7 @@ menu.addEventListener('click', event => {
 
 //Validation input form
 let form  = document.querySelector('form');
-console.log(form);
 let fields = form.querySelectorAll('.field');
-console.log(fields);
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
@@ -29,7 +27,6 @@ form.addEventListener('submit', function (event) {
 
   for (var i = 0; i < fields.length; i++) {
     if (!fields[i].value) {
-      console.log('field is blank', fields[i])
       var error = document.createElement('div')
       error.className = 'error'
       error.style.color = 'red'
@@ -39,7 +36,6 @@ form.addEventListener('submit', function (event) {
   }
 
 })
-
 
 //відкриття форми
 
@@ -58,9 +54,10 @@ closeButton.addEventListener('click', event => {
   formSend.classList.remove('show');
   formSend.classList.add('hide');
 });
+
 sendButton.addEventListener('submit', event => {
   event.preventDefault();
-  
+
   formSend.classList.remove('show');
   formSend.classList.add('hide');
   sendMessage(form);
@@ -81,7 +78,7 @@ async function sendMessage(form) {
       alert('Form sent');
     } else {
       alert ('Eror');
-    } 
+    }
    }
 }
 

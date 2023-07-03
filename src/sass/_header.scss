@@ -4,9 +4,9 @@
   min-height: 844px;
   background: url(../images/section-photo/headersmall@1x.jpg),
     url(../images/section-photo/headersmall@2x.jpg) no-repeat;
-  background-size: cover;  
-      
-   @media screen and (min-width: $desktop) {
+  background-size: cover;
+
+  @media screen and (min-width: $desktop) {
     min-width: 1440px;
     min-height: 847px;
     left: 0px;
@@ -18,103 +18,115 @@
 }
 
 .wrapper {
-  min-width: 358px;
+  width: 100%;
   min-height: 796px;
   top: 24px;
   border-radius: 20px;
-  position: inherit;
+  padding: 41px 20px;
+  position: relative;
   background: rgba(217, 217, 217, 0.4);
   backdrop-filter: blur(2px);
- 
+
   @media screen and (min-width: $desktop) {
     min-width: 1280px;
     min-height: 695px;
-    //padding-left: 80px;
     top: 76px;
     position: relative;
   }
 }
-.header-wrap {
-    min-width: 318px;
-    min-height: 52px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 41px 20px 20px 0;
-   
 
- @media screen and (min-width: 768px) {
-  min-width: 150px;
-  min-height: 94px;
-  padding: 25px 85px 0 85px;
-  
- }
+.header-wrap {
+  min-width: 318px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    min-width: 150px;
+  }
   @media screen and (min-width: $desktop) {
     min-width: 150px;
-    min-height: 94px;
-    
+  }
+}
 
+.logo {
+  max-width: 120px;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 144px;
   }
 }
 
 .logo__img {
   width: 120px;
   height: 52px;
+
   @media screen and (min-width: $desktop) {
     width: 144px;
     height: 94px;
-    
   }
 }
 
 .header-menu__list {
-  @media screen and (min-width: 769px){
-  width: 680px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  place-content: center space-around;
-  top: -45px;
-  left: 300px;
-  
-}
-@media screen and (min-width: $desktop){
-  height: 94px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  place-content: center space-around;
-  top: 25px;
-  left: 600px;
-  min-width: 680px;
-}
+  @media screen and (min-width: 768px) {
+    width: 652px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 24px;
+    top: -38px;
+    left: 220px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 94px;
+    position: absolute;
+    justify-content: space-between;
+    top: 25px;
+    left: 600px;
+  }
 }
 
 .header-menu__none {
-  @media screen and (min-width: 768px){
-  display: none;
-}}
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
 .header-menu__link {
-  font-family: Fira Sans;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
   color: $primary-text-color;
-  cursor: pointer; 
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+  }
+
+  &:hover {
+    color: $defolt-color;
+    text-decoration: underline;
+  }
 }
+
 .menu-burger {
   display: none;
 }
 
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767.98px) {
   /* body.lock { //щоб не прокручувався контент під відкритим меню
     overflow: hidden;
   } */
 
   .menu-burger {
     display: block;
-    position: relative;
+    position: absolute;
+    top: 59px;
+    right: 20px;
     width: 36px;
     height: 16px;
     z-index: 3;
@@ -145,6 +157,7 @@
     top: 7px;
     transition: all 0.3s ease 0;
   }
+
   .header-menu {
     justify-content: center;
     display: flex;
@@ -158,6 +171,7 @@
     transform: translateY(-100%);
     overflow: auto;
   }
+
   .header-menu.start {
     transform: translateY(0);
     z-index: 2;
@@ -174,57 +188,42 @@
   .menu-burger.start span {
     transform: scale(0);
   }
+
   .header-menu__list {
-    min-height: 347px;
     display: flex;
     flex-direction: column;
-   // position: absolute;
     align-items: center;
-    place-content: center space-around;
+    gap: 24px;
     padding-top: 224px;
-    padding-bottom: 225px;
-  }
-  .header-menu__link {
-    font-family: Fira Sans;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.2;
-    color: $primary-text-color;
-    cursor: pointer;
-    &:hover {
-      color: $defolt-color;
-    }
   }
 }
 
 .header-title {
-  font-family: Fira Sans;
   font-weight: 600;
   font-size: 36px;
   line-height: 1.2;
   color: $defolt-color;
   margin-bottom: 16px;
-    @media screen and (min-width: 769px){
-      font-size: 50px;
 
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 50px;
+  }
 
-    @media screen and (min-width: $desktop) {
-      font-weight: 700;
-      font-size: 64px;
-      margin-bottom: 8px;
-    }
+  @media screen and (min-width: $desktop) {
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 8px;
+  }
 }
 
 .header-title__small {
-  font-family: Fira Sans;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
   color: $primary-text-color;
   text-align: center;
-  display: flex;
-  @media screen and (min-width: 769px){
+
+  @media screen and (min-width: 768px) {
     font-size: 30px;
   }
 
@@ -233,12 +232,12 @@
     font-size: 36px;
   }
 }
+
 .header-btn {
   width: 265px;
   height: 50px;
   background-color: $defolt-color;
   color: #ffffff;
-  font-family: Fira Sans;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
@@ -263,15 +262,15 @@
   flex-direction: column;
   margin: 228px auto auto auto;
   cursor: pointer;
-  
+
   &.hidden {
     visibility: hidden;
   }
+
   @media screen and (min-width: $desktop) {
     width: 652px;
     height: 251px;
-    align-items: start; 
+    align-items: start;
     margin: 119px auto 372px 109px;
-    
   }
 }
