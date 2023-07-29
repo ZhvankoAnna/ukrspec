@@ -1,23 +1,26 @@
-.form-container{
-  min-width: 391px;
-  height: 604px;
-  position: absolute;
-  left: 0px;
-  top: 158px;
+.form-container {
+  // width: 391px;
+  // min-height: 604px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
 
-    @media screen and (min-width: 768px){
-      //top: 158px;
-      top: 90%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
+  // @media screen and (min-width: 768px){
+  //   top: 90%;
+  //   left: 50%;
+  //   margin-right: -50%;
+  //   transform: translate(-50%, -50%);
+  // }
 
   @media screen and (min-width: $desktop) {
     //max-width: 1062px;
-    min-width: 1062px;
-    height: 545px;
-    top: 80%;
+    // width: 1062px;
+    // height: 545px;
+    // top: 80%;
     /*left: calc(50% - 1062px/2);
     top: calc(50% - 545px/2 + 73px);
       left: 50%;
@@ -26,9 +29,9 @@
     */
   }
 }
-.form-send{
-  visibility: hidden;
-}
+// .form-send{
+//   visibility: hidden;
+// }
 .form-send.hide {
   visibility: hidden;
 }
@@ -37,25 +40,38 @@
   visibility: visible;
 }
 
-.form-wrapper{
+.form-wrapper {
+  width: 100%;
+  min-height: 604px;
   position: absolute;
-  left: 0px;
-  background: #FFFFFF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // left: 0px;
+  background: #ffffff;
+  z-index: 10;
 
   @media screen and (min-width: $desktop) {
-    left: calc(50% - 1062px/2);
+    // left: calc(50% - 1062px/2);
+    max-width: 1062px;
+    height: 545px;
     border-radius: 20px;
     //top: calc(50% - 545px/2 + 73px);
   }
 }
-.form{
-  padding: 0 15px  0 15px;
+.form {
+  width: 357px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px 0 15px;
+
   @media screen and (min-width: $desktop) {
-    padding: 0 234px  0 234px;
+    width: 594px;
+    padding: 0 234px 0 234px;
   }
 }
 
-.form-title{
+.form-title {
   width: auto;
   height: 29px;
   margin-top: 64px;
@@ -75,22 +91,22 @@
 textarea {
   width: 357px;
   border-radius: 20px;
-  border: 1px solid #2B4570;
+  border: 1px solid #2b4570;
   box-sizing: border-box;
   margin-bottom: 8px;
   cursor: pointer;
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     width: 287px;
   }
 }
+
 textarea {
   height: 165px;
   padding: 16px 0 0 16px;
 
-  @media screen and (min-width: $desktop){
-   height: 133px;
-   width: 594px;
-
+  @media screen and (min-width: $desktop) {
+    height: 133px;
+    width: 594px;
   }
 }
 
@@ -98,21 +114,20 @@ textarea {
   height: 44px;
   padding-left: 16px;
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     height: 52px;
     margin-bottom: 24px;
-    &:nth-child(2n + 1){
-    margin-right: 10px;
-  }
+    &:nth-child(2n + 1) {
+      margin-right: 10px;
+    }
   }
 }
 
-
-::placeholder{
+::placeholder {
   position: absolute;
   width: auto;
   height: auto;
-  left: calc(50% - 34px/2 - 145.5px);
+  left: calc(50% - 34px / 2 - 145.5px);
   top: 14px;
   font-family: 'Fira Sans';
   font-style: normal;
@@ -122,20 +137,19 @@ textarea {
   color: #888888;
 
   @media screen and (min-width: $desktop) {
-    left: calc(50% - 134px/2 - 214px);
+    left: calc(50% - 134px / 2 - 214px);
     top: 16px;
- }
-}
-@media screen and (min-width: $desktop) {
-     input::placeholder {
-      left: calc(50% - 81px/2 - 87px);
-      top: 14px;
-
   }
 }
 
+@media screen and (min-width: $desktop) {
+  input::placeholder {
+    left: calc(50% - 81px / 2 - 87px);
+    top: 14px;
+  }
+}
 
-.form-icon-close{
+.form-icon-close {
   position: absolute;
   right: 24px;
   top: 24px;
@@ -146,11 +160,11 @@ textarea {
   }
   @media screen and (min-width: $desktop) {
     right: 32px;
-  top: 32px;
- }
+    top: 32px;
+  }
 }
 
-.send-btn{
+.send-btn {
   width: 265px;
   height: 50px;
   background-color: $defolt-color;
@@ -187,16 +201,16 @@ textarea {
     border-bottom: 1px solid #2b4570;
     width: 87px;
     display: block;
-}
-.form-send:hover.circul{
-  animation-play-state: running;
-}
+  }
+  .form-send:hover.circul {
+    animation-play-state: running;
+  }
 
-.line{
-  width: 87px;
-  color: $defolt-color;
-}
-  .circul{
+  .line {
+    width: 87px;
+    color: $defolt-color;
+  }
+  .circul {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -210,32 +224,29 @@ textarea {
     animation-timing-function: linear;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-
   }
-    @keyframes blue-circle{
-      0%{
-        left: 0px
-      }
-      50%{
-        background-color:#FBCA16;
-      }
-      100%{
-        left: 95px;
-        background-color:#FBCA16;
-      }
-    } 
-    
+  @keyframes blue-circle {
+    0% {
+      left: 0px;
+    }
+    50% {
+      background-color: #fbca16;
+    }
+    100% {
+      left: 95px;
+      background-color: #fbca16;
+    }
+  }
 }
 
-.element-left{
+.element-left {
   position: absolute;
   rotate: 180deg;
   top: 85px;
   left: 280px;
 }
-.element-right{
+.element-right {
   position: absolute;
   top: 85px;
   right: 280px;
-
 }
